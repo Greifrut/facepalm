@@ -1,11 +1,19 @@
 <nav class="navbar navber-top navbar-inverse">
     <div class="container">
         <div class="navbar-header">
-            <%= link_to  "Logical", root_path, class: 'navbar-brand' %>
+            <%= link_to  "Facepalm", root_path, class: 'navbar-brand' %>
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li> <%= link_to 'Home', root_path %> </li>
+                <li> <%= link_to 'Домой', root_path %> </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <% if current_user %>
+                <li><span><%= current_user.email %></span></li>
+                <li><%= link_to 'Выйти', sign_out_path, method: :delete %></li>
+                <% else %>
+                <li><%= link_to 'Войти', sign_in_path %></li>
+                <% end %>
             </ul>
         </div>
     </div>
