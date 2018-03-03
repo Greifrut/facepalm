@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
 
-  resources :users,         only: [:new, :create]
+  resources :users,         only: [:new, :create, :index, :show]
   resources :user_sessions, only: [:create, :destroy]
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out

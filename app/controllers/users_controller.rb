@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  before_action :current_user, only: [:edit, :update, :index]
+
+    def index
+      @users = User.paginate(page: params[:page])
+    end
 
     def new
       @user = User.new
