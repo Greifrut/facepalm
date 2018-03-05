@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304105637) do
+ActiveRecord::Schema.define(version: 20180305095246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 20180304105637) do
     t.integer "requested_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "accepted_requester_id"
-    t.boolean "accepted_requested_id"
+    t.boolean "accepted"
     t.index ["requested_id"], name: "index_friendships_on_requested_id"
     t.index ["requester_id", "requested_id"], name: "index_friendships_on_requester_id_and_requested_id", unique: true
     t.index ["requester_id"], name: "index_friendships_on_requester_id"
