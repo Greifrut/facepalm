@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
 
-  resources :users do
-    member do
-      get :requesting, :requesters
-    end
-  end
+  resources :users 
   resources :user_sessions, only: [:create, :destroy]
   resources :friendships, only: [:create, :destroy, :update]
 

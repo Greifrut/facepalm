@@ -18,7 +18,7 @@ class User < ApplicationRecord
     end
 
     def find_accepted_friendships?(other_user)
-        active_friendships.where("requester_id = ? OR requested_id = ? AND accepted = true").limit(1).first
+        active_friendships.where(accepted: true).limit(1).first
     end
 
     def request_sent(other_user)

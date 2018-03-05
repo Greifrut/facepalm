@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+  
 
     def create 
         friendships = Friendship.new(requester_id: params[:requester_id],
@@ -17,9 +18,9 @@ class FriendshipsController < ApplicationController
     end
 
     def update
-        friendship = Friendship.find_by(id: params[:id])
+        friendship = Friendship.find_by(id: params[:id]).update_attributes(accepted: true)
 
-        if params[:accepted_requested_id] == 'true'
+        if params[:accepted] == 'true'
             friendship.accepted = true
             friendship.save
             flash[:succes] = "Запрос принят"
@@ -28,4 +29,6 @@ class FriendshipsController < ApplicationController
             redirect_to root_path
         end
     end
+
+   
 end
