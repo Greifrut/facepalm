@@ -3,7 +3,7 @@ class User < ApplicationRecord
     acts_as_authentic
     #
 
-    #Зависимости для User => Friendship
+    #Зависимости для Friendship < User
     has_many :active_friendships, class_name: "Friendship", foreign_key: "requester_id", dependent: :destroy
     has_many :pasive_friendships, class_name: "Friendship", foreign_key: "requested_id", dependent:  :destroy
    
@@ -12,6 +12,10 @@ class User < ApplicationRecord
 
     has_many :sent_requests, -> {where("active_friendships.accepted" == false)}, through: :active_friendships, source: :requested
     has_many :requests_received, -> {where("active_friendships.accepted" == false)}, through: :pasive_friendships, source: :requester
+
+    #Зависимость Post < User
+    has_many :posts, dependent: :destroy
+
 
     def is_friend?(other_user)
         other_user.in?(friends) || other_user.in?(inverse_friends)

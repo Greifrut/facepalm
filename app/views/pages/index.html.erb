@@ -12,6 +12,12 @@
             <li>Текущий ip: <%= current_user.current_login_ip %></li>
         </ul>
     </div>
+    <%= form_for(@post) do |f| %>
+        <div class="field">
+            <%= f.text_area :post, placeholder: "Введите текст" %>
+        </div>
+        <%= f.submit "Post", class: "btn bnt-large btn-primary" %>
+    <% end %>
 <% else %>
 <div class="jumbotron">
         <div class="container">
