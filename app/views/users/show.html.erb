@@ -3,6 +3,10 @@
 <div class="span8">
     <% if @user.posts.any? %>
         <h3>Post (<%= @user.posts.count %>)</h3>
-        <%= render @posts %>
+        <ol class="posts" >
+            <% @user.posts.each do |i| %>
+            <li><%= i.post %></li>
+            <% end %>
+        </ol>
     <% end %>
 </div>

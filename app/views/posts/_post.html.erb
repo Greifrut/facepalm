@@ -1,8 +1,6 @@
-<ol class="microposts">    
-    <li>
-   <span class="content"><%= @posts.post %></span>
-   <span class="timestamp">
-       Posted <%= time_ago_in_words(@posts.created_at) %> ago.
-   </span>
-   </li>
-</ol>
+<ol class="microposts">
+    <% @posts.each do |post| %>
+        <li><%= post.post %>
+        </li>
+    <% end %>
+    </ol>
