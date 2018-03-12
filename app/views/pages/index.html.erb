@@ -1,26 +1,18 @@
 <% if current_user %>
-    <div class="page-header"><h1>Добро пожаловать!</h1></div>
-
-    <h2>Некоторая информация для тебя:</h2>
-
-    <div class="well well-lg">
-        <ul>
-            <li>Количество логинов: <%= current_user.login_count %></li>
-            <li>Количество неудавшихся залогиниваний: <%= current_user.failed_login_count %></li>
-            <li>Последний заход: <%= current_user.last_request_at %></li>
-            <li>Текущий вход в систему: <%= current_user.current_login_at %></li>
-            <li>Текущий ip: <%= current_user.current_login_ip %></li>
-        </ul>
-    </div>
-    
-    <%= form_for(@post) do |f| %>
-    <div class="field">
-        <%= f.text_area :post, placeholder: "Введите текст" %>
-    </div>
-    <%= f.submit "Post", class: "btn bnt-large btn-primary" %>
-<% end %>
+    <div class="container-fluid">        
+        <div class="row">
+                    <aside class="col-lg-4">
+                        <section>
+                           <%= current_user.email %>
+                        </section>        
+                    </aside>
+                <div class="col-lg-4>
+                    <%= render 'posts/post_form' %>
+                </div>
+        </div>  
+    </div>      
 <% else %>
-<div class="jumbotron">
+    <div class="jumbotron">
         <div class="container">
             <h1>Приветствуем!</h1>
             <p>Зарегестрируйся чтобы начать.</p>
@@ -32,3 +24,4 @@
         </div>
     </div>
 <% end %>
+</div>

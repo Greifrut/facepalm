@@ -1,0 +1,6 @@
+ <%= form_for(@post) do |f| %>
+    <div class="field">
+        <%= f.text_area :post, placeholder: "Введите текст" %>
+    </div>
+        <%= f.submit "Post", class: "btn bnt-large btn-primary" %>
+<% end %>
