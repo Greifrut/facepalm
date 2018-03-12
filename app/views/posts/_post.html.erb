@@ -1,6 +1,13 @@
-<ol class="microposts">
-    <% @posts.each do |post| %>
-        <li><%= post.post %>
-        </li>
-    <% end %>
-    </ol>
+<% if @feed.any? %>
+    <h3>Post (<%= @feed.count %>)</h3>
+    
+        <% @feed.each do |i| %>
+            <div class="posts" >
+                <span class="content"><%= i.post %></span>
+                <span class="timestamp">
+                    Опубликовано <%= time_ago_in_words(i.created_at) %>
+                </span>
+            </div>
+        <% end %>
+    
+<% end %>

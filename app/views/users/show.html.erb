@@ -1,12 +1,5 @@
 <h1><%= @user.email %></h1>
 <%= render 'friends_form'%>
 <div class="span8">
-    <% if @user.posts.any? %>
-        <h3>Post (<%= @user.posts.count %>)</h3>
-        <ol class="posts" >
-            <% @user.posts.each do |i| %>
-            <li><%= i.post %></li>
-            <% end %>
-        </ol>
-    <% end %>
+
 </div>
