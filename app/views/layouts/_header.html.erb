@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-light fixed-top">
+<nav class="navbar navbar-expand-sm bg-color fixed-top navbar-dark">
     <div class="container">
         <div class="navbar-header">
             <%= link_to  "Facepalm", root_path, class: 'navbar-brand' %>
@@ -9,7 +9,7 @@
                 <li class="nav-item"><%= link_to 'Все пользователи', users_path, class: 'nav-link' %></li>
                 <li class="nav-tem"><%= link_to 'Выйти', sign_out_path, method: :delete, class: 'nav-link' %></li>
                 <% else %>
-                <li><%= link_to 'Войти', sign_in_path %></li>
+                <li class="nav-item"><%= link_to 'Войти', sign_in_path, class: "nav-link" %></li>
                 <% end %>
             </ul>
         </div>
