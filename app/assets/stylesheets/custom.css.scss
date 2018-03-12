@@ -2,6 +2,10 @@
 
 // header //
 
+body {
+    background-color: rgb(194, 194, 194);
+}
+
 .bg-color {
     background-color: #563d7c;
 }
@@ -20,19 +24,17 @@ li {
     width: 50%;
 }
 
+// отсут от header //
 .container-fluid {
     padding-top: 100px;
 
 }
 
+// стиль постов //
 
-aside {
-    section {
-        padding: 10px 0;
-    }
-    span {
-        display: block;
-        margin-bottom: 3px;
-        line-height: 1px;
-    }
+.posts {
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
