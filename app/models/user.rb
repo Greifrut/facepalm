@@ -16,6 +16,9 @@ class User < ApplicationRecord
     #Зависимость Post < User
     has_many :posts, dependent: :destroy
 
+    #Зависимость Like < User
+    has_many :likes, dependent: :destroy
+
 
     def is_friend?(other_user)
         other_user.in?(friends) || other_user.in?(inverse_friends)
