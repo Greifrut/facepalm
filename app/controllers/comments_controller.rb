@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
     def create
-        @post = Post.find(params[:post_id])
-        @comment = current_user.comments.build(post_id: params[:post_id])
+        @comment = current_user.comments.build(comment_params)
+        @comment.user_id = current_user.id
 
-        if @commetn.save
+        if @comment.save
             flash[:succes] = "Коментарий создан"
             redirect_to root_path
         else
@@ -21,4 +21,10 @@ class CommentsController < ApplicationController
       @comment.destroy
       redirect_to root_path
     end
+
+    private 
+
+        def comment_params
+            params.require(:comment).permit(:content, :post_id)
+        end
 end

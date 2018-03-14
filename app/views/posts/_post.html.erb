@@ -16,7 +16,16 @@
                     <%= ".....#{i.likes.count} " %>
                     <% end %>
             </div>
-             <%= text_area_tag (:content, "content"), size: "colsxrols" %>
+                <div class="container_comment">
+                    <%= form_for @comment do |f| %>
+                    
+                        <%= f.text_area :content, class: "comment-field" %>
+                        <%= f.hidden_field :post_id, value: i.id %>
+                        <%= f.submit "Комментировать", class: "btn btn-large" %>
+
+                    <% end %>
+                    
+                </div>
         <% end %>
     
 <% end %>
