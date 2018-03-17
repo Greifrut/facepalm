@@ -6,11 +6,20 @@ $brand-violent: #563d7c;
 $brand-black: #000000;
 $brand-white: #fff;
 
+//mixins//
+@mixin box-shadow-none(){
+    box-shadow: none;
+}
+
+@mixin stransition($transition, $ease: 'ease') {
+    transition: all $transition unquote($ease);
+}
+
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
 
 // header //
-
-
-
 .bg-color {
     background-color: $brand-violent;
 }
@@ -79,6 +88,14 @@ li {
         padding-right: 0;
         border: none;
         border-bottom: 1px solid rgba($brand-black, .1);
+        @include box-shadow-none;
+        @include transition(.3s);
+        @include border-radius(0px);
+        &::-webkit-input-placeholder {
+            color: rgba($brand-black, .3);
+            text-transform: uppercase;
+        }
+
     }
 }
 
@@ -96,4 +113,7 @@ li {
         outline: none;
     }
 }
+
+input, textarea {color: #000;}
+.placeholder {color: #aaa;}
 

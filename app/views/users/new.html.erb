@@ -8,29 +8,29 @@
                     <%= render 'shared/errors', object: @user %>
     
                     <div class="form-group">
-                        <%= f.label :name %>
-                        <%= f.text_field :name, class: 'form-control' %>
+                        <%= f.label :name, class: 'sr-only' %>
+                        <%= f.text_field :name, placeholder: 'имя' , class: 'form-control' %>
                     </div>
     
                     <div class="form-group">
-                        <%= f.label :surname, "Фамилия" %>
-                        <%= f.text_field :surname, class: 'form-control' %>
+                        <%= f.label :surname, class: 'sr-only' %>
+                        <%= f.text_field :surname, placeholder: 'фамилия', class: 'form-control' %>
                     </div>
     
                     <div class="form-group">
-                        <%= f.label :email %>
-                        <%= f.email_field :email, class: 'form-control' %>
+                        <%= f.label :email, class: 'sr-only' %>
+                        <%= f.email_field :email, placeholder: 'email', class: 'form-control' %>
                     </div>
     
     
                     <div class="form-group">
-                        <%= f.label :password  %>
-                        <%= f.password_field :password, class: 'form-control' %>
+                        <%= f.label :password, class: 'sr-only'  %>
+                        <%= f.password_field :password, placeholder: 'пароль', class: 'form-control' %>
                     </div>
     
                     <div class="form-group">
-                        <%= f.label :password_confirmation %>
-                        <%= f.password_field :password_confirmation, class: 'form-control' %>
+                        <%= f.label :password_confirmation, class: 'sr-only' %>
+                        <%= f.password_field :password_confirmation, placeholder: 'подтвердите', class: 'form-control' %>
                     </div>
                     
                     <%= f.submit 'Зарегестрировать', class: 'btn btn-primary' %>
