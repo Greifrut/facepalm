@@ -1,13 +1,18 @@
 @import "bootstrap";
 
+$font-primary: 'Open Sans', Arial, sans-serif;
+
+$brand-violent: #563d7c;
+$brand-black: #000000;
+$brand-white: #fff;
+
+
 // header //
 
-body {
-    background-color: rgb(194, 194, 194);
-}
+
 
 .bg-color {
-    background-color: #563d7c;
+    background-color: $brand-violent;
 }
 
 li {
@@ -38,3 +43,57 @@ li {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+// форма регистрации //
+
+.container-signup {
+    font-family: $font-primary;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #848484;
+}
+
+.form-style {
+    padding: 30px;
+    margin-top: 4em;
+    -webkit-box-shadow: -4px 7px 46px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: -4px 7px 46px 2px rgba(0,0,0,0.1);
+    -o-box-shadow: -4px 7px 46px 2px rgba(0,0,0,0.1);
+    box-shadow: -4px 7px 46px 2px rgba(0,0,0,0.1);
+    background: $brand-white;
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+    label {
+        font-weight: 300;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .form-control {
+        font-size: 16px;
+        font-weight: 300;
+        height: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+        border-bottom: 1px solid rgba($brand-black, .1);
+    }
+}
+
+.btn-primary {
+    height: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: none;
+    background: $brand-violent;
+    color: $brand-white;
+    box-shadow: -2px 10px 20px -1px rgba($brand-violent, .4);
+    &:hover, &:focus, &:active {
+        color: $brand-white;
+        background: lighten($brand-violent, 10%)!important;
+        outline: none;
+    }
+}
+
