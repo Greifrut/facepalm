@@ -28,6 +28,14 @@ $brand-white: #fff;
     border-radius: $radius;
 }
 
+@mixin inline-block () {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+
 /* =======================================================================
 *
 *
@@ -104,6 +112,35 @@ h1, h2, h3, h4, h5, h6, figure {
     .menu-1, .menu-2 {
         @media screen and (max-width: 768px) {
             display: none;
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 2px 0 0 0;
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: inline;
+            a {
+                font-size: 14px;
+                padding: 30px 10px;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, .5);
+                @include transition(.5s);
+                &:hover,&:active,&:focus {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+            &.btn-cta {
+                a {
+                    color: $brand-violent;
+                    span {
+                        background: $brand-white;
+                        padding: 4px 20px;
+                    }
+                }
+            }
         }
     }
 }
