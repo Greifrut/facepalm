@@ -5,6 +5,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 $brand-violent: #563d7c;
 $brand-black: #000000;
 $brand-white: #fff;
+$brand-red: #ff6351ff;
 
 /* ===========================================================================
 *
@@ -237,12 +238,12 @@ body{
     padding-right: 20px;
     padding-left: 20px;
     border: none;
-    background: $brand-violent;
+    border-radius: 100px;
+    background: $brand-red;
     color: $brand-white;
-    box-shadow: -2px 10px 20px -1px rgba($brand-violent, .4);
     &:hover, &:focus, &:active {
-        color: $brand-white;
-        background: lighten($brand-violent, 10%)!important;
+        color: $brand-red;
+        background: lighten($brand-white, 10%)!important;
         outline: none;
     }
 }
