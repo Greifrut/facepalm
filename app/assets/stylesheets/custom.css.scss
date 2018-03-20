@@ -49,8 +49,41 @@ body{
         background-repeat: no-repeat;
         position: relative;
         background-size: cover;
-        height: 100pv;
+        height: 100vh;
+        background-color: #c0392bff;
     }
+
+.top-header {
+    margin-top: 48px;
+    font-size: 22px;
+    .menu {
+        li  {
+            list-style-type: none;
+            display: inline;
+            padding: 50px;
+            vertical-align: middle;
+            a {
+                text-decoration: none;
+                color: #fff;
+                &:hover {
+                    color: #ffe800ff;
+                }
+            }
+        }
+    }
+    .button-signin {
+        li {
+            list-style-type: none;
+            vertical-align: midle;
+            a {
+                text-decoration: none;
+                float: right;
+            }
+            
+        }
+    }
+}
+
 
 // стиль постов //
 

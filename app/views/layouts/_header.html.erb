@@ -1,5 +1,23 @@
 <div class="top-header">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo">
+                    <img src="/assets/logo.svg" alt="Facepalm">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <ul class="menu">
+                    <li><%= link_to  "Главная", root_path %></li>
+                    <li><%= link_to  "О нас", "#" %></li>
+                    <li><%= link_to  "Контакты", "#" %></li>
+                </ul>
+            </div>
+            <div class="col-md-2 button-signin">
+                <li><%= link_to  "Войти", sign_in_path %></li>
+            </div>
+        </div>
+    </div>
 </div>
 <!--  <<nav class="navbar navbar-expand-sm bg-color fixed-top navbar-dark">
     <div class="container">
