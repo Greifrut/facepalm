@@ -1,52 +1,6 @@
-<div id="page">
-    <nav class="fpl-nav" role="navigation">
-        <div class="fpl-container">
-            <div class="row">
-                <div class="col-xs-2">
-                    <div id="fpl-logo">
-                        <%= link_to  "Facepalm", root_path %>
-                    </div>
-                </div>
-                <div class="col-xs-8 text-center menu-1">
-                    <ul>
-                        <li><%= link_to  "О нас", "#" %></li>
-                        <li><%= link_to  "Контакты", "#" %></li>
-                    </ul>
-                </div>
-                <div class="col-xs-2 text-right hidden-xs menu-2">
-                    <ul>
-                        <li class="btn-cta">
-                            <%= link_to sign_in_path do %>
-                            <span>Войти</span>  
-                            <% end %>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+<div class="top-header">
+
 </div>
-
-
-<header id="fpl-header" class="fpl-cover" role="banner" style="background-image:url(app/assets/images/img-bg.jpg);">
-    <div class="fpl-container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <div class="display-t">
-                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                        <h1>Приветствуем!</h1>
-                        <p><h2>Зарегестрируйся чтобы начать.</h2></p>
-                        <p>
-                            <%= link_to new_user_path, class: 'btn btn-default' do %>
-                            Зарегестрироваться &raquo;
-                            <% end %>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 <!--  <<nav class="navbar navbar-expand-sm bg-color fixed-top navbar-dark">
     <div class="container">
         <div class="navbar-header">
