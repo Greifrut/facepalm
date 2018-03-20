@@ -8,31 +8,32 @@
             </div>
             <div class="col-md-7">
                 <ul class="menu">
-                    <li><%= link_to  "Главная", root_path %></li>
+                    <li class="active"><%= link_to  "Главная", root_path %></li>
                     <li><%= link_to  "О нас", "#" %></li>
                     <li><%= link_to  "Контакты", "#" %></li>
                 </ul>
             </div>
             <div class="col-md-2 button-signin">
-                <li><%= link_to  "Войти", sign_in_path %></li>
+                <li><%= link_to sign_in_path do%>
+                    <span>Войти</span>
+                    <% end %>
+                </li>
             </div>
         </div>
     </div>
 </div>
-<!--  <<nav class="navbar navbar-expand-sm bg-color fixed-top navbar-dark">
+<div class="center-header">
     <div class="container">
-        <div class="navbar-header">
-            <%= link_to  "Facepalm", root_path, class: 'navbar-brand' %>
-        </div>
-        <div id="navbar">
-            <ul class="nav navbar-nav pull-right">
-                <% if current_user %>
-                <li class="nav-item"><%= link_to 'Все пользователи', users_path, class: 'nav-link' %></li>
-                <li class="nav-tem"><%= link_to 'Выйти', sign_out_path, method: :delete, class: 'nav-link' %></li>
-                <% else %>
-                <li class="nav-item"><%= link_to 'Войти', sign_in_path, class: "nav-link" %></li>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1>Facepalm</h1>
+                <span>Поберегите своё лицо.</span>
+                <%= link_to signup_path do %>
+                <span>Регистрация</span>
                 <% end %>
-            </ul>
+            </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
-</nav>> -->
+</div>
