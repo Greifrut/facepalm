@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-$font-primary {
+@font-primary {
     font-family: 'Roboto';
     src:url('fonts/roboto-condensed.regular.ttf') format('truetype');
     font-weight: normal;
@@ -75,15 +75,22 @@ header{
 }
 
 .top-header {
-    ul {
-        text-decoration: none;
-        list-style-type: none;
-        padding-top: em(50);
-        li {
-            display: inline;
-            font-size: em(16);
-            a {
-                color: $brand-white;
+    .row{
+        height: inherit;
+        ul {
+            text-decoration: none;
+            list-style-type: none;
+            padding-top: em(50);
+            }
+            li {
+                text-align: left;
+                display: inline;
+                font-size: em(16);
+                padding-left: em(20);
+                a {
+                    color: $brand-white;
+                    font-family: font-primary;
+                }
             }
         }
     }
@@ -102,7 +109,7 @@ header{
 // форма регистрации //
 
 .container-signup {
-    font-family: $font-primary;
+    font-family: font-primary;
     line-height: 1.5;
     font-size: 16px;
     color: #848484;
