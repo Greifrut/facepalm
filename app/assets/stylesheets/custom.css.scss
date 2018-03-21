@@ -45,112 +45,17 @@ $brand-red: #ff6351ff;
 *
 * ======================================================================= */
 
-body{
-        background: url('/assets/img-bg.jpg');
+header{
+        background: url('/assets/img_bg.jpg');
         background-repeat: no-repeat;
         position: relative;
+        background-position: 50% 0;
         background-size: cover;
         height: 100vh;
         background-color: #c0392bff;
     }
 
-.top-header {
-    margin-top: 48px;
-    font-size: 22px;
-    .menu {
-        padding: 0;
-        margin: 2px 0 0 0;
-        li  {
-            list-style-type: none;
-            display: inline;
-            padding: 50px;
-            vertical-align: middle;
-            
-            a {
-                text-decoration: none;
-                color: #fff;
-                &:hover, &:active {
-                    color: #fff;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-    .button-signin {
-        li {
-            list-style-type: none;
-            vertical-align: middle;
-            a {
-                text-decoration: none;
-                float: right;
-                color: #ff6351ff;
-            }
-            span {
-                background: #fff;
-                padding: 4px 20px;
-                border-radius: 100px;
-                transition: .6s;
-            }
-            
-        }
-    }
-}
 
-.button-signin {
-    li {
-        a:hover {
-            color: #fff;
-            span {
-                background: #ff6351ff;
-            }
-        }
-    }
-}
-
-.center-header {
-    display: inline-block;
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    color: #fff;
-    h1 {
-        
-        text-transform: uppercase;
-        font-size: 80px;
-    }
-    span {
-        margin: 15px;
-        font-size: 35px;
-        white-space: nowrap;
-    }
-    .button {
-        list-style-type: none;
-        position: absolute;
-        padding-top: 20px;
-        left: 35%;
-        margin-right: -50%;
-        a {
-            color: #ff6351ff;
-            text-decoration: none;
-            span {
-                font-size: 30px;
-                background: #fff;
-                padding: 4px 20px;
-                border-radius: 100px;
-                transition: .6s;
-            }
-        }
-        
-    }
-
-}
-.button a:hover {
-    color: #fff;
-    span {
-        background: #ff6351ff;
-    }
-
-}
 // стиль постов //
 
 .posts {
