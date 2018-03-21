@@ -1,6 +1,12 @@
 @import "bootstrap";
 
-$font-primary: 'Open Sans', Arial, sans-serif;
+$font-primary {
+    font-family: 'Roboto';
+    src:url('fonts/roboto-condensed.regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+};
+
 
 $brand-violent: #563d7c;
 $brand-black: #000000;
@@ -15,6 +21,12 @@ $brand-red: #ff6351ff;
 * ============================================================================ */
 @mixin box-shadow-none(){
     box-shadow: none;
+}
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
 }
 
 @mixin transition($transition, $ease: 'ease') {
@@ -54,6 +66,28 @@ header{
         height: 100vh;
         background-color: #c0392bff;
     }
+.logo {
+    img {
+        position: absolute;
+        padding-top: em(40);
+        margin-left: em(45);
+    }
+}
+
+.top-header {
+    ul {
+        text-decoration: none;
+        list-style-type: none;
+        padding-top: em(50);
+        li {
+            display: inline;
+            font-size: em(16);
+            a {
+                color: $brand-white;
+            }
+        }
+    }
+}
 
 
 // стиль постов //
