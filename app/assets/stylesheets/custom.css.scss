@@ -2,10 +2,6 @@
 @import "fonts";
 
 
-$brand-violent: #563d7c;
-$brand-black: #000000;
-$brand-white: #fff;
-$brand-red: #ff6351ff;
 
 /* ===========================================================================
 *
@@ -13,9 +9,6 @@ $brand-red: #ff6351ff;
 *
 *
 * ============================================================================ */
-@mixin box-shadow-none(){
-    box-shadow: none;
-}
 
 $browser-context: 16; // Default
 

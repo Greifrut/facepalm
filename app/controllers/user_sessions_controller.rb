@@ -5,10 +5,10 @@ class UserSessionsController < ApplicationController
     end
 
     def create
-      @user_session = UserSession.new(user_session_params)
+      @user_session = UserSession.new(user_session_params.to_h)
       if @user_session.save
         flash[:success] = "Вход выполнен!"
-        redirect_to root_path
+        redirect_to users_path
       else
         render :new
       end
