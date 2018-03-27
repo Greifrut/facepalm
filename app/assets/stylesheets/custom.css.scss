@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "fonts";
 
 
 $brand-violent: #563d7c;
@@ -30,11 +31,22 @@ $browser-context: 16; // Default
 *   
 *
 * ======================================================================= */
-
+body {
+  font-family: 'Roboto Condensed';
+}
 
 * {
   margin: 0;
   padding: 0;
+}
+
+header {
+  background-image: url('img_bg.jpg');
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0.1;
 }
 
 .top-navbar { 
@@ -67,6 +79,38 @@ a.login-button {
   &:hover, &:active, &:focus {
     background: #1de9c3ff;
     color: white;
+  }
+}
+
+.content-center {
+  margin-top: em(130);
+  h1 {
+    font-size: em(100);
+    color: #ffffff;
+    font-family: 'Comfortaa';
+  }
+
+  .signup {
+    padding: 60px 0 0 0;
+  }
+  a.button-reg {
+    font-size: em(20);
+    text-decoration: none;
+    color: #0fb699ff;
+    padding: em(10) em(15);
+    outline: none;
+    border: 1px solid #1de9c3ff;
+    background: #1de9c3ff;
+    border-radius: em(13);
+    transition: .2s ease;
+    &:hover, &:active, &:focus {
+      background: #00ffcfff;
+    }
+  }
+  img {
+    margin-left: em(-120);
+    height: 500px;
+    width: auto;
   }
 }
 
