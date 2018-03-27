@@ -32,3 +32,27 @@ $browser-context: 16; // Default
 * ======================================================================= */
 
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top-navbar { 
+  padding-top: em(45);
+}
+  
+.left-nav ul li {
+  display: inline;
+  padding: 0 23px;
+  a {
+    text-decoration: none;
+    color: #e3e5e6;
+    font-size: em(16);
+    &:hover, &:active, &:focus{
+      color: black;
+      border-bottom: 2px black;
+    }
+  }  
+}
+
+
