@@ -48,11 +48,26 @@ $browser-context: 16; // Default
     text-decoration: none;
     color: #e3e5e6;
     font-size: em(16);
+    transition: .2s ease;
     &:hover, &:active, &:focus{
       color: black;
       border-bottom: 2px black;
     }
   }  
+}
+
+a.login-button {
+  text-decoration: none;
+  color: #0000008e;
+  padding: em(10) em(15);
+  outline: none;
+  border: 1px solid #1de9c3ff;
+  border-radius: em(13);
+  transition: .5s ease;
+  &:hover, &:active, &:focus {
+    background: #1de9c3ff;
+    color: white;
+  }
 }
 
 
