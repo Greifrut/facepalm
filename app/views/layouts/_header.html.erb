@@ -1,8 +1,16 @@
-<nav class="purple" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+<nav class="navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <ul>
+                    <li><%= link_to  "Home", root_path %></li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <button class="loggin-button"><%= link_to  "Login", sign_in_path %></button>
+            </div>
+        </div>
     </div>
 </nav>
