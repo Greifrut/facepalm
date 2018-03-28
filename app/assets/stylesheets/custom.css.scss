@@ -13,7 +13,7 @@
 $browser-context: 16; // Default
 
 @function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em
+  @return #{$pixels/$context}em;
 }
 
 
@@ -24,13 +24,16 @@ $browser-context: 16; // Default
 *   
 *
 * ======================================================================= */
-body {
-  font-family: 'Roboto Condensed';
-}
+
+  /* Главная страница */
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Roboto Condensed';
 }
 
 header {
@@ -106,5 +109,9 @@ a.login-button {
     width: auto;
   }
 }
+
+/* Страница юзера */
+
+
 
 
