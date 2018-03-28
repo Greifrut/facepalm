@@ -460,6 +460,33 @@ h1, h2, h3, h4, h5, h6, figure {
     }
   }
 
+  .st-buttons {
+    position: absolute;
+    z-index: 999;
+    display: inline;
+    top: 70%;
+    left: 10%;
+    white-space: nowrap;
+    div {
+      display: inline-block;
+      margin-left: em(30);
+      span {
+        padding: 15px 30px;
+        border: 1px solid #0fb699ff;
+        border-radius: em(10);
+        &:hover, &:active, &:focus {
+          background: #0fb699ff;
+          a {
+            font-size: em(20);
+            color: white;
+          }
+        }
+
+      }
+    }
+    
+  }
+
   .single & {
     position: relative;
     height: em(700);
