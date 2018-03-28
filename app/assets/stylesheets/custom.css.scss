@@ -322,4 +322,83 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+.st-navigation {
+  .prev {
+    transition: .5s ease;
+    text-align: right;
+    &:hover {
+      padding-right: 30px;
+    }
+  }
+  .next {
+    transition: .5s ease;
+    text-align: left;
+    &:hover {
+      padding-left: 30px;
+    }
+  }
+  .st-cover {
+    width: 50%;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 10;
+    }
+    .copy {
+      position: relative;
+      z-index: 12;
+
+      display: block;
+      .display-t, .display-tc {
+        height: 400px;
+        display: table;
+        width: 100%;
+      }
+      .display-tc {
+        display: table-cell!important;
+        vertical-align: middle;
+        div {
+          padding: em(30);
+          span {
+            display: block;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255,.5);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: .05em;
+          }
+          h2 {
+            margin-bottom: 0;
+            color: white;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#st-aside {
+  width: 38.2%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  height: 100%;
+  z-index: 555;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 
