@@ -1,12 +1,30 @@
 <div id="page">
     <div id="st-aside" style="background-image: url('../assets/image_1.jpg')">
         <div class="overlay">
-            <nav role="navigation">
+            <nav class="logo" role="navigation">
                 <ul>
                     <li><%= link_to user_path do %>
                     <i class="fas fa-home"></i>
                     <% end %>
                     </li>
+                </ul>
+            </nav>
+            <div class="user-avatar">
+                <img src="../assets/project-1.jpg" alt=" ">
+            </div>
+            <div class="info">
+                <div class="user-info">
+                    <h2>Артур Бунько</h2>
+                    <hr/>
+                    <h3>artur.bunko@gmail.com</h3>
+                </div>
+            </div>
+            <nav class="menu" role="menu">
+                <ul>
+                    <li><%= link_to  "Edit profile", "#" %></li>
+                    <li><%= link_to  "All users", users_path %></li>
+                    <li><%= link_to  "Friends", "#" %></li>
+                    <li><%= link_to  "Notification", "#" %></li>
                 </ul>
             </nav>
         </div>
@@ -22,7 +40,6 @@
              </div>
             </div>
         </div>
-        
     </div>
 
     <div class="gototop js-top">

@@ -389,7 +389,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 #st-aside {
-  width: 38.2%;
+  width: 30%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -399,6 +399,66 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+  .user-avatar {
+      display: block;
+      position: absolute;
+      top: 13%;
+      left: 10%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 30px;
+      border-radius: 50%;
+      border: 1px solid #0fb699ff;
+      background: #0fb699ff;
+      z-index: 556;
+      img {
+        width: 150px;
+        border-radius: 50%;
+      }
+  }
+
+  .info {
+    display: inline-block;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    .user-info {
+      padding: 15px 40px 15px 50px;
+      border: 1px;
+      background: #0fb699ff;
+      border-color: #0fb699ff;
+      border-radius: 0 em(10) em(10) 0;
+
+      h2, h3 {
+        margin: 0 0 em(5) 0;
+      }
+      h2 {
+        font-size: em(20);
+        color: white;
+      }
+      h3 {
+        font-size: em(15);
+        color: lighten($color: black, $amount: 80%);
+      }
+    }
+  }
+
+  nav.menu {
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    ul li {
+      width: 200px;
+      list-style-type: none;
+      border-bottom: 1px solid #0fb69995;
+      a {
+      text-decoration: none;
+      font-size: em(20);
+      }
+    }
+  }
 
   .single & {
     position: relative;
@@ -455,7 +515,7 @@ h1, h2, h3, h4, h5, h6, figure {
       border-radius: 50%;
     }
   }
-  nav {
+  nav.logo{
     top: 0;
     bottom: inherit !important;
     .single & {
