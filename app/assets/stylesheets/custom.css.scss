@@ -112,6 +112,214 @@ a.login-button {
 
 /* Страница юзера */
 
+#page {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  .offcanvas & {
+    overflow: hidden;
+    position: absolute;
 
+    &:after {
+      transition: 2s ease;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 101;
+      background: rgba(0,0,0,.7);
+      content: "";
+    }
+  }
+}
+a {
+  color: #FC5185;
+  transition: .5s ease;
+  &:hover, &:active, &:focus {
+    color: #FC5185;
+    outline: none;
+    text-decoration: none;
+  }
+}
+p, ul, ol {
+  margin-bottom: em(30);
+  font-size: em(18);
+  line-height: em(38);
+}
+
+h1, h2, h3, h4, h5, h6, figure {
+  color: black;
+  font-weight: 400;
+  margin: 0 0 em(30) 0;
+}
+::selection {
+  color: white;
+  background: #FC5185;
+}
+
+.st-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 1001;
+  .top-menu {
+    border-bottom: 1px solid rgba(white,.1);
+    padding: 28px 0;
+  }
+  .top {
+    border-bottom: 1px solid rgba(white,.1);
+    padding: 7px 0;
+    margin-bottom: 0;
+    .num, .st-social {
+      display: inline-block;
+      margin: 0;
+    }
+    .num {
+      color: rgba(white,.6);
+      font-size: em(13);
+      padding-right: em(20);
+      margin-right: em(10);
+      border-right: 1px solid rgba(white, .2);
+      letter-spacing: 0px;
+    }
+    .st-social {
+      li {
+        font-style: em(14);
+        a {
+          padding: 0 7px;
+          i {
+            font-size: em(14);
+          }
+        }
+      }
+    }
+  }
+  #st-logo {
+    font-size: em(24);
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-weight: 700;
+    a {
+      span {
+        color: #FC5185;
+      }
+    }
+  }
+  a {
+    padding: 5px 10px;
+    color: white;
+  }
+  ul {
+    padding: 0;
+    margin: 5px 0 0 0;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: inline;
+      a {
+        font-size: em(13);
+        padding: em(30) em(15);
+        text-transform: uppercase;
+        color: rgba(255,255,255,.5);
+        letter-spacing: 2px;
+        transition: .5s ease;
+        &:hover, &:focus, &:active {
+          color: rgba(255, 255, 255,1);
+        }
+      }
+      &.has-dropdown {
+        position: relative;
+        .dropdown {
+          width: em(140);
+          box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+          z-index: 1002;
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: 40px;
+          left: 0;
+          text-align: left;
+          background: black;
+          padding: 20px;
+          border-radius: 4px;
+          transition: .0s ease;
+          &:before {
+            bottom: 100%;
+            left: 40px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-bottom-color: #000;
+            border-width: 8px;
+            margin-left: -8px;
+          }
+
+          li {
+            display: block;
+            margin-bottom: 7px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            a {
+              padding: 2px 0;
+              display: block;
+              color: lighten($color: black, $amount: 60%);
+              line-height: 1.2;
+              text-transform: none;
+              font-size: 13px;
+              letter-spacing: 0;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+        &:hover, &:focus {
+          a {
+            color: white;
+          }
+          .dropdown {
+            //visibility: visible;
+            //opacity: 1;
+          }
+        }
+      }
+      &.btn-cta {
+        a {
+          color: white;
+          span {
+            background: #FC5185;
+            padding: 4px 20px;
+            display: inline-block;
+            transition: .3s ease;
+            border-radius: 100px;
+          }
+          &:hover {
+            span {
+              box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
+            }
+          }
+        }
+      }
+      &:active {
+        > a{
+          color: white !important;
+        }
+      }
+    }
+  }
+}
 
 
