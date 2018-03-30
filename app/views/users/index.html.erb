@@ -1,3 +1,17 @@
+<% content_for :user_info do %>
+            <div class="user-avatar">
+                <img src="../assets/project-1.jpg" alt=" ">
+            </div>
+            <div class="info">
+                <div class="user-info">
+                    <h2><%= current_user.name %> <%= current_user.surname %> </h2>
+                    <hr/>
+                    <h3><%= current_user.email %></h3>
+                </div>
+            </div>
+<% end %>
+
+
 <h1>Все пользователи: </h1>
 
 <%= will_paginate %>

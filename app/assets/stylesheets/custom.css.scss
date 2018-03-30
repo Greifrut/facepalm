@@ -38,11 +38,11 @@ body {
 
 header {
   background-image: url('img_bg.jpg');
-  min-height: 100%;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  z-index: 0.1;
+  z-index: 1;
 }
 
 .top-navbar { 
@@ -87,7 +87,7 @@ a.login-button {
   }
 
   .signup {
-    padding: 60px 0 0 0;
+    padding: em(40) 0 0 0;
   }
   a.button-reg {
     font-size: em(20);
@@ -153,7 +153,6 @@ p, ul, ol {
 h1, h2, h3, h4, h5, h6, figure {
   color: black;
   font-weight: 400;
-  margin: 0 0 em(30) 0;
 }
 ::selection {
   color: white;

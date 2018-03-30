@@ -1,46 +1,17 @@
-<div id="page">
-    <div id="st-aside" style="background-image: url('../assets/image_1.jpg')">
-        <div class="overlay">
-            <nav class="logo" role="navigation">
-                <ul>
-                    <li><%= link_to current_user do %>
-                    <i class="fas fa-home"></i>
-                    <% end %>
-                    </li>
-                </ul>
-            </nav>
+
+<% content_for :user_info do %>
             <div class="user-avatar">
                 <img src="../assets/project-1.jpg" alt=" ">
             </div>
             <div class="info">
                 <div class="user-info">
-                    <h2>Артур Бунько</h2>
+                    <h2><%= current_user.name %> <%= current_user.surname %> </h2>
                     <hr/>
-                    <h3>artur.bunko@gmail.com</h3>
+                    <h3><%= current_user.email %></h3>
                 </div>
             </div>
-            <nav class="menu" role="menu">
-                <ul>
-                    <li><%= link_to  "Edit profile", "#" %></li>
-                    <li><%= link_to  "All users", users_path %></li>
-                    <li><%= link_to  "Friends", "#" %></li>
-                    <li><%= link_to  "Notification", "#" %></li>
-                    <li><%= link_to  "Exit", sign_out_path, method: :delete %></li>
-                </ul>
-            </nav>
-            <div class="st-buttons">
-                <div>
-                    <span><%= link_to  "My article", "#" %></span>
-                </div>
-                <div>
-                    <span><%= link_to  "Create article", "#" %></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="st-main-content">
-        <div class="st-post">
-            <div class="st-entry padding">
+<% end %>
+            
             <img src="../assets/project-1.jpg" alt=" ">
              <div>
                 <span class="st-post-date">October 12, 2016</span>
@@ -48,10 +19,3 @@
                 <p>How two simple exercises changed my life</p>
              </div>
             </div>
-        </div>
-    </div>
-
-    <div class="gototop js-top">
-        <a href="#" class="js-top"><i class="icon-arrow-up"></i></a>
-    </div>
-</div>

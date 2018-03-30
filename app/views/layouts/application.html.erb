@@ -11,7 +11,7 @@
   <body>
     
     <% if current_user %>
-        <%= yield %>
+        <%= render  "layouts/header_user" %>
     <% else %>
     <header>
       <%= render 'layouts/header' %>
