@@ -1,11 +1,11 @@
 
 @font-face {
     font-family:'Comfortaa';
-    src: url('fonts/Comfortaa Regular.eot');
-	src: url('fonts/Comfortaa Regular.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Comfortaa Regular.woff2') format('woff2'),
-		url('fonts/Comfortaa Regular.woff') format('woff'),
-		url('fonts/Comfortaa Regular.svg#Comfortaa Regular') format('svg');
+    src: url('Comfortaa Regular.eot');
+	src: url('Comfortaa Regular.eot?#iefix') format('embedded-opentype'),
+		url('Comfortaa Regular.woff2') format('woff2'),
+		url('Comfortaa Regular.woff') format('woff'),
+		url('Comfortaa Regular.svg#Comfortaa Regular') format('svg');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -14,12 +14,12 @@
 
 @font-face {
     font-family:'Roboto Condensed';
-    src: url('fonts/Roboto Condensed Regular.eot');
-	src: url('fonts/Roboto Condensed Regular.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Roboto Condensed Regular.woff2') format('woff2'),
-		url('fonts/Roboto Condensed Regular.woff') format('woff'),
-		url('fonts/Roboto Condensed Regular.ttf') format('truetype'),
-		url('fonts/Roboto Condensed Regular.svg#Roboto Condensed Regular') format('svg');
+    src: url('Roboto Condensed Regular.eot');
+	src: url('Roboto Condensed Regular.eot?#iefix') format('embedded-opentype'),
+		url('Roboto Condensed Regular.woff2') format('woff2'),
+		url('Roboto Condensed Regular.woff') format('woff'),
+		url('Roboto Condensed Regular.ttf') format('truetype'),
+		url('Roboto Condensed Regular.svg#Roboto Condensed Regular') format('svg');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -28,12 +28,10 @@
 
 @font-face {
     font-family:'FontAwesome';
-    src: url('fonts/fa-solid-900.eot');
-	src: url('fonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
-		url('fonts/fa-solid-900.woff2') format('woff2'),
-		url('fonts/fa-solid-900.woff') format('woff'),
-		url('fonts/fa-solid-900.ttf') format('truetype'),
-		url('fonts/fa-solid-900.svg#Roboto Condensed Regular') format('svg');
-   
-
+    src: url('fa-solid-900.eot');
+	src: url('fa-solid-900.eot?#iefix') format('embedded-opentype'),
+		url('fa-solid-900.woff2') format('woff2'),
+		url('fa-solid-900.woff') format('woff'),
+		url('fa-solid-900.ttf') format('truetype'),
+		url('fa-solid-900.svg#Roboto Condensed Regular') format('svg');
 }
