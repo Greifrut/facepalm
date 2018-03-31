@@ -1,23 +1,28 @@
-<div class="page-header"><h1>Войти</h1></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 col-md-offset-4">
+            <%= form_for @user_session, :html => {class: 'st-form'} do |f| %>
+                <%= render 'shared/errors', object: @user_session %>
+                <h2>Sign in</h2>
+                <div class="form-group">
+                    <%= f.label :email, class: "sr-only" %>
+                    <%= f.email_field :email, placeholder: "email", class: 'form-control' %>
+                </div>
 
-<%= form_for @user_session do |f| %>
-    <%= render 'shared/errors', object: @user_session %>
+                <div class="form-group">
+                    <%= f.label :password, class: "sr-only" %>
+                    <%= f.password_field :password, placeholder: "password" ,class: 'form-control' %>
+                </div>
 
-    <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
+                <div class="form-group">
+                    <%= f.label :remember_me %>
+                    <%= f.check_box :remember_me %>
+                </div>
+
+                <%= f.submit "Sing in", class: 'btn btn-primary' %>
+
+            <% end %>
+        </div>
     </div>
-
-    <div class="form-group">
-        <%= f.label :password%>
-        <%= f.password_field :password, class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-        <%= f.label :remember_me %>
-        <%= f.check_box :remember_me %>
-    </div>
-
-    <%= f.submit "Войти", class: 'btn btn-primary btn-lg' %>
-
-<% end %>
+</div>
