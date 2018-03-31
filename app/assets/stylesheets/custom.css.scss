@@ -399,47 +399,38 @@ h1, h2, h3, h4, h5, h6, figure {
   background-repeat: no-repeat;
   background-position: center center;
 
-  .user-avatar {
-      display: block;
-      position: absolute;
-      top: 13%;
-      left: 10%;
+  .user-page {
+    position: relative;
+    display: block;
+    padding: 20px;
+    margin: 100px 0 0 0;
+    background: #0fb699ff;
+    .user-avatar {
+      float: left;
       width: 150px;
       height: 150px;
-      margin-bottom: 30px;
-      border-radius: 50%;
-      border: 1px solid #0fb699ff;
-      background: #0fb699ff;
-      z-index: 556;
+      overflow: hidden;
+      border-radius: 20%;
+      padding: 5px;
       img {
-        width: 150px;
-        border-radius: 50%;
+        display: block;
+        width: 100%;
       }
-  }
-
-  .info {
-    display: inline-block;
-    position: absolute;
-    top: 15%;
-    left: 30%;
+    }
     .user-info {
-      padding: 15px 40px 15px 50px;
-      border: 1px;
-      background: #0fb699ff;
-      border-color: #0fb699ff;
-      border-radius: 0 em(10) em(10) 0;
-
-      h2, h3 {
-        margin: 0 0 em(5) 0;
-      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(0%, -50%);
       h2 {
-        font-size: em(20);
-        color: white;
+        font-size: 20px;
+        color: #ffffff;
       }
       h3 {
-        font-size: em(15);
-        color: lighten($color: black, $amount: 80%);
+        font-size: 16px;
+        color: #ffffff;
       }
+
     }
   }
 
