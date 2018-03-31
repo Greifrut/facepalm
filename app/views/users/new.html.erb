@@ -7,7 +7,7 @@
                     <%= form_for @user, :html => {class: 'st-form'} do |f| %>
                     <%= render 'shared/errors', object: @user %>
 
-                    <h2>Sign in</h2>
+                    <h2>Sign up</h2>
 
                     <div class="form-group">
                         <%= f.label :name, class: 'sr-only' %>
@@ -34,8 +34,10 @@
                         <%= f.label :password_confirmation, class: 'sr-only' %>
                         <%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: 'form-control' %>
                     </div>
-                       
-                    <%= f.submit 'Sign in', class: 'btn btn-primary' %>
+                    <div class="form-group">
+                        <p>Not register? <%= link_to  "Sign In", sign_in_path %></p>
+                    </div>
+                    <%= f.submit 'Sign Up', class: 'btn btn-primary' %>
     
                 <% end %>
             </div>
