@@ -16,3 +16,4 @@
 //= require jquery3
 //= reuqire popper
 //= require bootstrap
+//= require trix
