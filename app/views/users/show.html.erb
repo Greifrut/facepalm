@@ -15,9 +15,14 @@
 <% end %>
             
             <img src="../assets/project-1.jpg" alt=" ">
-             <div>
-                <span class="st-post-date">October 12, 2016</span>
-                <h2><a href="#">How to be an effective web development</a></h2>
-                <p>How two simple exercises changed my life</p>
-             </div>
+            <% @posts.each do |post| %>
+            <div>
+                <span class="st-post-date"><%= post.created_at.strftime("%B %d, %Y") %></span>
+                <h2><%= link_to post_path(post) do %>
+                    <%= post.title %>
+                    <% end %>            
+                </h2>
+                <p><%= post.summary %></p>
+            </div>
+            <% end %>
             </div>

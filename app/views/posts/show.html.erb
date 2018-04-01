@@ -1,4 +1,10 @@
+<% content_for :title do%>
+    <div class="page-title">
+        <span><%= @post.created_at.strftime("%B %d, %Y") %></span>
+        <h2><%= @post.title %></h2>
+    </div>
+<% end %>
 
-<%= @post.title %>
-<%= @post.summary %>
-<%= @post.post.html_safe %>
+<% content_for :post do%>
+    <%= @post.post.html_safe %>
+<% end %>
