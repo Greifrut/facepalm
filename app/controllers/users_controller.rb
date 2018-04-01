@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :current_user, only: [:edit, :update, :index]
+  before_action :current_user, only: [:show, :edit, :update, :index]
 
     def show
       @user = User.find(params[:id])
@@ -28,6 +28,18 @@ class UsersController < ApplicationController
 
     end
 
+    def edit
+      @user = User.find(params[:id])
+    end
+
+    def update
+      @user = User.find(params[:id])
+      if @user.update_attributes(users_params)
+        flash[:succes] = "Successfully update"
+      else
+        flash[:danger] = "Update wrong!"
+      end
+    end
     private 
 
     def users_params
