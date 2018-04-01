@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
-      @post = current_user.posts.build if current_user
       @posts = current_user.posts.paginate(page: params[:page]) 
       @comment = current_user.comments.build if current_user
     end
