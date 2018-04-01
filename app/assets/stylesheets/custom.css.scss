@@ -543,7 +543,7 @@ h1, h2, h3, h4, h5, h6, figure {
       border-radius: 50%;
     }
   }
-  nav {
+  nav.logo {
     top: 0;
     bottom: inherit !important;
     .single & {
@@ -597,6 +597,7 @@ footer {
   .single & {
     margin-left: 0;
     min-width: 960px;
+    width: 960px;
     margin: 0 auto;
   }
   @media screen and (max-width: 768px) {

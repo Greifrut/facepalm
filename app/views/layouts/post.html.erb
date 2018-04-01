@@ -10,13 +10,16 @@
 
 <body class="single">
 <div id="page">
-    <div id="st-aside">
+    <div id="st-aside" style="background-image: url('../assets/image_2.jpg')" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
-        <div class="navigation">
+        <nav class="logo" role="navigation">
             <ul>
-                <li><a href="#"><i class="icon-home"></i></a></li>
+                <li><%= link_to current_user do %>
+                    <i class="icon-image"></i>
+                <% end %>
+                </li>
             </ul>
-        </div>
+        </nav>
         <div class="page-title">
             <span>September 10, 2016</span>
             <h2>How to be an effective web developer</h2>
