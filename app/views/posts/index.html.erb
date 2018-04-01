@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+        
+    <div>
+        <span class="st-post-date"><%= post.created_at.strftime("%B %d, %Y") %></span>
+        <h2><%= link_to post_path(post) do %>
+            <%= post.title %>
+            <% end %>            
+        </h2>
+        <p><%= post.summary %></p>
+    </div>
+    <%= link_to  "Edit", edit_post_path(post) %>
+    <%= link_to  "Delete", post_path(post), method: :delete %>
+<% end %>
