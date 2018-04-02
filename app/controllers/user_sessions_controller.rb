@@ -7,7 +7,6 @@ class UserSessionsController < ApplicationController
     def create
       @user_session = UserSession.new(user_session_params.to_h)
       if @user_session.save
-        flash[:success] = "Вход выполнен!"
         redirect_to current_user
       else
         render :new
@@ -16,7 +15,6 @@ class UserSessionsController < ApplicationController
 
     def destroy
       current_user_session.destroy
-      flash[:success] = "Досвидания!"
       redirect_to root_path
     end
 
