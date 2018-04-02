@@ -5,9 +5,13 @@ class FriendshipsController < ApplicationController
         friendships = Friendship.new(requester_id: params[:requester_id],
                                      requested_id: params[:requested_id],
                                      accepted: false)
-        friendships.save
-        flash[:succes] = "Запрос отправлен"
-        redirect_to root_path
+        if friendships.save
+            flash[:succes] = "Запрос отправлен"
+            redirect_to root_path
+        else
+            flash[:danger] = "Successfully created..."
+            redirect_back(fallback_location: posts_path)
+        end    
     end
 
     def destroy
