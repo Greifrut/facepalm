@@ -418,6 +418,10 @@ h1, h2, h3, h4, h5, h6, figure {
       overflow: hidden;
       border-radius: 20%;
       padding: 5px;
+      .upload_field{
+        position: absolute;
+        z-index: 999;
+      }
       img {
         display: block;
         width: 100%;

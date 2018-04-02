@@ -2,7 +2,7 @@ class User < ApplicationRecord
     # Authlogic 
     acts_as_authentic
     #
-
+    mount_uploader :avatar, AvatarUploader
     #Зависимости для Friendship < User
     has_many :active_friendships, class_name: "Friendship", foreign_key: "requester_id", dependent: :destroy
     has_many :pasive_friendships, class_name: "Friendship", foreign_key: "requested_id", dependent:  :destroy

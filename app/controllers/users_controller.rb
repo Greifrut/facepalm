@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
-      @posts = current_user.posts.paginate(page: params[:page]) 
+      @posts = @user.posts.paginate(page: params[:page]) 
       @comment = current_user.comments.build if current_user
     end
 
@@ -44,6 +44,6 @@ class UsersController < ApplicationController
     def users_params
         params.require(:user).permit(:email, :password,
                                     :password_confirmation,
-                                    :name, :surname)
+                                    :name, :surname, :avatar)
     end
 end

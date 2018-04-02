@@ -1,5 +1,4 @@
 
-    
 <% if ifriend = current_user.find_accepted_friendships?(@user) %>
     <%= link_to "unfriend", ifriend, method: :delete, class: "btn btn-danger btn-xs" %>
 <% elsif ifriend = current_user.request_sent(@user) %>

@@ -4,7 +4,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4 col-md-offset-4">
             <div class="form-style">
-                    <%= form_for @user, :html => {class: 'st-form'} do |f| %>
+                    <%= form_for @user, :html => {class: 'st-form', multipart: true} do |f| %>
                     <%= render 'shared/errors', object: @user %>
 
                     <h2>Sign up</h2>
@@ -23,7 +23,10 @@
                         <%= f.label :email, class: 'sr-only' %>
                         <%= f.email_field :email, placeholder: 'email', class: 'form-control' %>
                     </div>
-    
+                    
+                    <div class="form-group">
+                        <%= f.file_field :avatar %>
+                    </div>
     
                     <div class="form-group">
                         <%= f.label :password, class: 'sr-only'  %>

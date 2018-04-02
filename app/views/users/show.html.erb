@@ -1,19 +1,32 @@
 
 <% content_for :user_info do %>
         <div class="user-page clearfix">
-            <div class="user-avatar">
-                <img src="../assets/avatar.jpg" alt=" ">
-            </div>
+                <div class="user-avatar">
+                        <%= image_tag(@user.avatar_url) if @user.avatar?%> 
+                </div>
+
+                <% if current_user == @user.id %>
+                    <%= form_for @user, html: {multipart: true}, method: :patch do |f| %>
+                    <div class="upload_field">
+                    <% unless @user.avatar? %>
+                        <%= f.file_field :avatar %>
+                        <br />
+                        <%= f.submit "Save"%>
+                        <% end %>
+                    </div>
+                    <% end %>
+                <% end %>
+            
             <div class="info">
                 <div class="user-info">
-                    <h2><%= current_user.name %> <%= current_user.surname %> </h2>
+                    <h2><%= @user.name %> <%= @user.surname %> </h2>
                     <hr/>
-                    <h3><%= current_user.email %></h3>
+                    <h3><%= @user.email %></h3>
                 </div>
             </div>
         </div>    
 <% end %>
-            
+
             <img src="../assets/project-1.jpg" alt=" ">
             <% @posts.each do |post| %>
             <div>
