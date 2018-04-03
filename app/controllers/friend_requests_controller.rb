@@ -15,6 +15,11 @@ class FriendRequestsController < ApplicationController
       @outgoing = current_user.friend_requests
     end
 
+    def update
+      @friend_request.accept
+      head :no_content
+    end
+
     def destroy
       @friend_request.destroy
     end
