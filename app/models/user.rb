@@ -4,8 +4,9 @@ class User < ApplicationRecord
     #
     mount_uploader :avatar, AvatarUploader
     #Зависимости для Friendship < User
-    
-    
+    has_many :friend_requesters, dependent: :destroy
+    has_many :pending_friends, through: :friend_requesters, source: :friend
+
 
     #Зависимость Post < User
     has_many :posts, dependent: :destroy
