@@ -21,7 +21,6 @@
 <ul class="users">
     <% @users.each do |user| %>
     <li><%= link_to user.email, user %></li>
-    <%= render 'friends_form' %>
     <% end %>
 </ul>
 <%= will_paginate %>
