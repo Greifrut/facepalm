@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'friendships/create'
+
+  get 'friendships/update'
+
+  get 'friendships/destroy'
+
   root to: 'pages#index'
 
   resources :users 
