@@ -21,7 +21,6 @@
 <ul class="users">
     <% @users.each do |user| %>
     <li><%= link_to user.email, user %></li>
-    <%= link_to  "Friend", friend_requests_path, method: :post, class: "btn btn-primaty" %>
     <% end %>
     
 </ul>
