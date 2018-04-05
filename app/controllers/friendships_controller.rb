@@ -10,7 +10,7 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friendship = Friendship.find_by_id(params[:id])
+    @friendship = Friendship.find_by(params[:id])
     @friendship.update_attributes(accepted: true)
     if @friendship.save
       redirect_to root_path, notice: "Successfuly confirmed friend!"
@@ -25,5 +25,6 @@ class FriendshipsController < ApplicationController
     redirect_to root_path
   end
 
+    
 
 end

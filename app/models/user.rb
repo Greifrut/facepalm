@@ -23,17 +23,8 @@ class User < ApplicationRecord
 
 
     #Методы для Friendships
-
-    def request_sent(user)
-        friendships.find_by(user_id: user, accepted: false)
-    end
-
-    def request_received(user)
-        requested_friendships.where('friend_id=? AND accepted=0', user)
-    end
-
-    def friend(user)
-        friendships.where('user_id=? OR friend_id=? AND accepted=1', user, user).limit(1).first
+    def requested(user)
+        user.in?(requested_friendships)
     end
 
     def friends(user)
