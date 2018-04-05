@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+
   def create
     @friendship = current_user.friendships.build(friend_id: params[:friend_id], accepted: false)
     if @friendship.save
@@ -9,8 +10,8 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friendship = Friendship.find_by(id: params[:id])
-    @friendship.update_attributes({:accepted => true})
+    @friendship = Friendship.find_by_id(params[:id])
+    @friendship.update_attributes(accepted: true)
     if @friendship.save
       redirect_to root_path, notice: "Successfuly confirmed friend!"
     else

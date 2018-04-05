@@ -23,12 +23,25 @@ class User < ApplicationRecord
 
 
     #Методы для Friendships
-    def friends
-        active_friends | received_friends
+
+    def request_sent(user)
+        friendships.find_by(user_id: user, accepted: false)
     end
 
-    def pending
-      pending_friends | requested_friendships
+    def request_received(user)
+        requested_friendships.where('friend_id=? AND accepted=0', user)
+    end
+
+    def friend(user)
+        friendships.where('user_id=? OR friend_id=? AND accepted=1', user, user).limit(1).first
+    end
+
+    def friends(user)
+        user.in?(active_friends) | user.in?(received_friends)
+    end
+
+    def pending(user)
+      user.in?(pending_friends) | user.in?(requested_friendships)
     end
 
 end
