@@ -40,6 +40,6 @@
 
 <h2> Friend</h2>
 <% current_user.received_friends.each do |user| %>
-    <li><%= user.id %></li>
+    <li><%= user.name %> <%= user.surname %></li>
 <% end %>
 <%= will_paginate %>
