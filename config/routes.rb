@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'friends/index'
 
-  get 'friends/destroy'
-
-  resources :friend_requests
   root to: 'pages#index'
 
   resources :users 
