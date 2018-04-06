@@ -1,0 +1,6 @@
+<% current_user.received_friends.each do |user| %>
+    <li><%= user.name %> <%= user.surname %></li>
+<% end %>
+<% current_user.active_friends.each do |user| %>
+    <li><%= user.name %> <%= user.surname %></li>
+<% end %>
