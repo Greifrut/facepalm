@@ -4,6 +4,10 @@ class FriendshipsController < ApplicationController
     
   end
 
+  def show
+    
+  end
+
   def create
     @friendship = current_user.friendships.build(friend_id: params[:friend_id], accepted: false)
     if @friendship.save
@@ -27,9 +31,6 @@ class FriendshipsController < ApplicationController
     @friendship = Friendship.find_by(params[:id])
     @friendship.destroy
     redirect_to root_path
-  end
-
-  def notification
   end
 
 end
